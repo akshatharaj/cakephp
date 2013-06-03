@@ -1,6 +1,10 @@
 <?php
 
-class AdsController extends AppController {
+App::import('Controller', 'Base');
+
+class AdsController extends BaseController {
+
+    public $paginate = array( 'limit' => 2 );
 
     public function add(){
         if( $this->request->is('post') ){

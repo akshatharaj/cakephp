@@ -3,9 +3,16 @@
     padding: 0;
 }
 
+.centered {
+  margin: 0 auto;
+  width: 684px;
+  border:2px solid;
+}
+
+
 body {
-    font-family: Helvetica;
-    font-size: 12px;
+  font-family: Trebuchet MS;
+  font-size: 12px;
 }
 
 section, header, footer, aside, nav, article{
@@ -27,7 +34,7 @@ section, header, footer, aside, nav, article{
 
 #navbar{
     height: 33px;
-    background-color: #333333;
+    background-color: #BE8B49;
 }
 
 #navbar ul {
@@ -47,7 +54,9 @@ section, header, footer, aside, nav, article{
 
 #navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #521A09;
+    font-size: 14px;
+    font-family: Trebuchet MS;     
 }
 
 #navbar ul li a:hover {
@@ -57,8 +66,6 @@ section, header, footer, aside, nav, article{
 #sidebar {
     float: left;
     width: 150px;
-    background-color: #ffffff;
-
     padding: 15px;
 }
 
@@ -82,8 +89,6 @@ section, header, footer, aside, nav, article{
 
     padding: 15px;
     float: left;
-    width: 75%;
-
     background-color: #ffffff;
 }
 
@@ -139,17 +144,20 @@ input[type=submit]
     font-size: 18px; 
     margin-top: 15px;
     margin-bottom: 25px;
+    font-family: Trebuchet MS;
 }
 
 .listing h4{
     font-style:italic;
     font-size: 14px;
+    font-family: Trebuchet MS;
 }
 
 .listing p{
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 14px;
+    font-family: Trebuchet MS;
 }
 
 .listing hr{
@@ -161,4 +169,27 @@ input[type=submit]
     font-style:italic;
     margin-top: 25px;
     margin-bottom: 25px;
+    font-family: Trebuchet MS;
+}
+
+#footer{
+    background-color: #983201;
+    padding: 15px 10px 15px 10px;
+    color: #FFCA80;
+    text-align: center;
+    font-size: 14px;
+    font-family: Trebuchet MS;
+    font-style: italic;
+}
+
+.save_for_later a{
+   font-weight: bold;
+   font-size: 11px;
+}
+
+.home_text {
+   padding: 10px 0px 15px 0px;
+   line-height: 22px;
+   font-size: 14px;
+   text-align: justify;
 }

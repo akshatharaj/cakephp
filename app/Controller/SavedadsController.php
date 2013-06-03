@@ -1,6 +1,8 @@
 <?php
 
-class SavedAdsController extends AppController{
+App::import('Controller', 'Base');
+
+class SavedAdsController extends BaseController{
 
     public function add(){
         $this->SavedAd->create();

@@ -3,18 +3,6 @@
 App::uses('Security', 'Utility');
 class UsersController extends AppController {
 
-    function beforeFilter(){
-        $excludeBeforeFilter = array('add','login');
-            if (!in_array($this->action,$excludeBeforeFilter)){
-                $this->checkSession();
-            }
-    }
-
-    public function index(){
-        $users = $this->User->find('all');
-        $this->set('users', $users);
-    }
-
     public function add() {
         if ($this->request->is('post')) {
             $this->User->create();
@@ -43,6 +31,11 @@ class UsersController extends AppController {
             }
             $this->Session->setFlash(__('Invalid username or password'));
         }
+    }
+
+    public function logout(){
+        $this->Session->destroy();
+        $this->redirect(array('controller' => 'home', 'action' => 'index'));
     }
 
 }

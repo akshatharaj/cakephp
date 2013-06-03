@@ -15,7 +15,7 @@
   <p> <b> Maker: </b> <?php echo $ad['Ad']['maker']; ?> </p> 
   <p> <b> Price: </b> <?php echo $ad['Ad']['price']; ?> </p>
   <p> <b> Comments: </b> <?php echo $ad['Ad']['comments']; ?> </p>
-  <p> <?php echo $this->Html->link('Save ad for later', array('controller' => 'savedads', 'action' => 'add', '?' => array('user_id' => $ad['Ad']['user_id'], 'ad_id' => $ad['Ad']['id']))) ?>
+  <p class="save_for_later"> <?php echo $this->Html->link('Save ad for later', array('controller' => 'savedads', 'action' => 'add', '?' => array('user_id' => $ad['Ad']['user_id'], 'ad_id' => $ad['Ad']['id']))) ?>
   <hr>
   <?php endforeach ?>
 </div>

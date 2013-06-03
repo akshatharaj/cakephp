@@ -8,11 +8,11 @@
 
 
 </head>
-<body>
+<body class="centered">
 
-<header id="header">
-    <h1>Musicmart</h1>
-</header>
+  <div id="banner">
+    <?php echo $this->Html->image('banner.png'); ?>
+  </div>
 
 <nav id="navbar">
     <ul>
@@ -20,7 +20,12 @@
         <li><?php echo $this->Html->link('View Ads', array('controller'=>'ads', 'action'=>'index')); ?></li>
         <li><?php echo $this->Html->link('Post an Ad', array('controller'=>'ads', 'action'=>'add')); ?></li>
         <li><?php echo $this->Html->link('View my Saved Ads', array('controller'=>'Savedads', 'action'=>'index')); ?></li>
-        <li><?php echo $this->Html->link('Login', array('controller'=>'users', 'action'=>'login')); ?></li>
+        <?php if( $this->Session->read('User') == null): ?>
+            <li><?php echo $this->Html->link('Login', array('controller'=>'users', 'action'=>'login')); ?></li>
+        <?php endif; ?>
+        <?php if( !$this->Session->read('User') == null): ?>
+            <li><?php echo $this->Html->link('Logout', array('controller'=>'users', 'action'=>'logout')); ?></li>
+        <?php endif; ?>
     </ul>
 </nav>
 
@@ -36,7 +41,7 @@
 </section>
 
 <footer id="footer">
-    <h6>Copyright © 2010 Lorem Ipsum Awesome.</h6>
+    <h5> Developed as part of coursework for COSC 630 by Akshatha Raj (araj0@frostburg.edu) <h5>
 </footer>
 
 </body>
