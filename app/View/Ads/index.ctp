@@ -11,6 +11,7 @@
       on <?php echo $ad['Ad']['created']; ?>  </h4> 
 
   <p> A <?php echo $ad['Ad']['instrument_type']; ?> available for <?php echo $ad['Ad']['availability']; ?> </p>
+  <p> <b> Seller phone: </b> <?php echo $users->find('first', array( 'condition' => array( 'id' => $ad['Ad']['user_id'])))['User']['phone']; ?>  </p>
   <p> <b> Size: </b> <?php echo $ad['Ad']['size']; ?> </p>  
   <p> <b> Maker: </b> <?php echo $ad['Ad']['maker']; ?> </p> 
   <p> <b> Price: </b> <?php echo $ad['Ad']['price']; ?> </p>
