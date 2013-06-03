@@ -1,62 +1,43 @@
-<?php
-/**
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
-
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
+    <meta charset=utf-8 />
+    <title>the-nerd | Cake Basics Templates</title>
 
-		echo $this->Html->css('cake.generic');
+    <?php echo $this->Html->css('styles'); ?>
 
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
+
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
 
-			<?php echo $this->Session->flash(); ?>
+<header id="header">
+    <h1>Musicmart</h1>
+</header>
 
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
+<nav id="navbar">
+    <ul>
+        <li><?php echo $this->Html->link('Home', array('controller'=>'home', 'action'=>'index')); ?></li>
+        <li><?php echo $this->Html->link('View Ads', array('controller'=>'ads', 'action'=>'index')); ?></li>
+        <li><?php echo $this->Html->link('Post an Ad', array('controller'=>'ads', 'action'=>'add')); ?></li>
+        <li><?php echo $this->Html->link('View my Saved Ads', array('controller'=>'Savedads', 'action'=>'index')); ?></li>
+        <li><?php echo $this->Html->link('Login', array('controller'=>'users', 'action'=>'login')); ?></li>
+    </ul>
+</nav>
+
+<section id="middle">
+
+    <article id="main">
+        <?php echo $this->fetch('content'); ?>
+    </article>
+
+    <!-- make the middle region's background color expand -->
+    <div class="clear"></div>
+
+</section>
+
+<footer id="footer">
+    <h6>Copyright © 2010 Lorem Ipsum Awesome.</h6>
+</footer>
+
 </body>
-</html>
+</html> 

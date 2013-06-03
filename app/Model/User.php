@@ -1,5 +1,6 @@
 <?php
 
+App::uses('Security', 'Utility');
 class User extends AppModel {
 
     public $validate = array(
@@ -20,6 +21,11 @@ class User extends AppModel {
             'message' => 'Please enter password between 5 and 15 characters'
         )
     );
+
+    public function beforeSave( $options = array() ){
+        $this->data['User']['password'] = Security::hash( $this->data['User']['password'], 'sha1', true);
+        return true;
+    }
 
 }
 

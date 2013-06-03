@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica;
+    font-size: 12px;
+}
+
+section, header, footer, aside, nav, article{
+    display: block;
+}
+
+#header {
+    background-color: #000000;
+}
+
+#header h1 {
+    color: #ffff00;
+    padding: 15px;
+}
+
+#footer h6 {
+    margin: 0 0 0 10px;
+}
+
+#navbar{
+    height: 33px;
+    background-color: #333333;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+#navbar ul li {
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#navbar ul li a:hover {
+    color: #ffff00;
+}
+
+#sidebar {
+    float: left;
+    width: 150px;
+    background-color: #ffffff;
+
+    padding: 15px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+}
+
+#sidebar ul li {
+    padding: 5px 0 5px 0;
+}
+
+#sidebar ul li a {
+    color: #333333;
+}
+
+#sidebar h2 {
+    margin: 0 0 0 10px;
+}
+
+#main {
+
+    padding: 15px;
+    float: left;
+    width: 75%;
+
+    background-color: #ffffff;
+}
+
+.clear {clear: both;}
+
+li.active {
+    color: #ffff00;
+}
+
+label{
+    width: 160px;
+    float: left;
+    text-align: left;
+    margin-right: 0.5em;
+    display: block;
+    font-size: 14px;
+}
+
+input[type=text], [type=select], [type=email], [type=tel], [type=password]
+{
+    border:solid 1px #BFBDBD;
+    height: 28px;
+    padding-left:10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 191px;
+    font-size: 12px;
+    box-shadow: 2px 2px 0 #828181 inset;
+}
+
+textarea {
+    width: 200px;
+}
+
+select {
+    width: 200px;
+    margin-bottom: 10px;
+    height:50px;
+}
+
+input[type=submit]
+{
+    margin-top: 20px;
+    width: 90px;
+    background-color: 
+}
+
+.listing {
+    padding-left: 10px;
+}
+
+.listing h2{
+    font-size: 18px; 
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.listing h4{
+    font-style:italic;
+    font-size: 14px;
+}
+
+.listing p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.listing hr{
+    margin-top: 15px;
+    margin-bottom: 15px;    
+}
+
+.listing h3{
+    font-style:italic;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
