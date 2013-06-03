@@ -1,6 +1,6 @@
 <div class="listing">
 
-  <h2> Listing of Saved ads for <?php $user ?> </h3>
+  <h2> Listing of Saved ads for <?php echo $user; ?> </h3>
 
   <?php foreach($ads as $ad): ?>
 
