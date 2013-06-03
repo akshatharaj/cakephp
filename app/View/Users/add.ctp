@@ -1,5 +1,6 @@
+<br/>
 <h2> Sign up for an account </h2>
-
+<br/>
 <?php
 
   echo $this->Form->create();

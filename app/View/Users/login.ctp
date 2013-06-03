@@ -1,4 +1,5 @@
-<h2> Login </h2>
+<br/>
+<h2> Please login to proceed </h2>
 <br />
 <?php
 
