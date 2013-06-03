@@ -9,6 +9,7 @@ class AdsController extends BaseController {
     public function add(){
         if( $this->request->is('post') ){
             $this->Ad->save( $this->request->data);
+            $this->redirect(array('controller' => 'ads', 'action' => 'index'));        
         }
 
     }
